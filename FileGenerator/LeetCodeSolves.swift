@@ -23,7 +23,7 @@ for ext in extensions {
         let codeFile = folder.appendingPathComponent("\(name).\(ext)")
         if !fileManager.fileExists(atPath: codeFile.path) {
             try? (template + "\n").write(to: codeFile, atomically: true, encoding: .utf8)
-            print("The file was created: \(CodeFile.path)")
+            print("The file was created: \(codeFile.path)")
         }
 
         let readmeFile = folder.appendingPathComponent("README.md")
